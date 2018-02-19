@@ -5,13 +5,15 @@ let createHeaderDom = () => {
     header.id = `header`;
     header.innerHTML = `
         <div id="navigation-form">
-            <form id="add-refresh-form">
-                <input id="add-refresh-form_add-button" type="submit" value="Добавить">
-                <input id="add-refresh-form_refresh-button" type="submit" value="Обновить"> 
+            <form id="add-form">
+                <input id="add-form_button" type="submit" value="Добавить">
+            </form>
+            <form id ="refresh-form">    
+                <input id="refresh-form_button" type="submit" value="Обновить"> 
             </form>
             <form id="search-form">
+                <input id="search-form_button" type="submit" value="&#x1F50D;" disabled> 
                 <input id="search-form_input" type="text" name="search" placeholder="Событие, дата или участник">
-                <input id="search-form_button" type="submit" value="&#x1F50D;"> 
             </form>
         </div>
     `;
@@ -19,3 +21,15 @@ let createHeaderDom = () => {
 };
 
 createHeaderDom();
+
+
+let formAddRef = document.querySelector(`#refresh-form`);
+console.log(formAddRef);
+formAddRef.onsubmit = (event) => {
+    let searchButton = document.querySelector(`#refresh-form_button`);
+    console.log(searchButton);
+    searchButton.disabled = false;
+    alert(`проверка видимости узла`);
+    event.preventDefault();
+};
+
