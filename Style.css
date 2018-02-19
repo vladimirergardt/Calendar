@@ -1,0 +1,26 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: cornsilk;
+}
+
+#header {
+    height: 15vh;
+    background-color: lightgray;
+    border-bottom: 4px solid grey;
+}
+
+
+
+#navigation-form {
+    padding-top: 10vh;
+}
+
+#add-refresh-form {
+    display: inline-block;
+}
+
+#search-form {
+
+    display: inline-block;
+}
